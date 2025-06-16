@@ -12,7 +12,7 @@ class GetRequester:
         return response.content
 
     def load_json(self):
-        response_body = self.get_response_body()
-        return requests.get(self.url).json()
+        response = requests.get(self.url)
+        return response.json()
     
 
